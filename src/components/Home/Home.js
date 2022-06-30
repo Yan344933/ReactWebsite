@@ -1,11 +1,9 @@
 import React from 'react';
 import './Home.css';
 
-class DailyWeather extends React.Component {
+const Home = () => {
 
-
-    render() {
-        return (
+    return (
         <div className='home'>
             <header className="page-header">
                 <div>Welcome to Yan's React.js Laboratory!</div>
@@ -16,5 +14,5 @@ class DailyWeather extends React.Component {
         </div>
         )
     }
-}
-export default DailyWeather;
+
+export default Home;

@@ -4,9 +4,12 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 const Menu = (props) => {
 
     const [today, setToday] = useState(new Date());
+    const [dest, setDest] = useState('');
     const intervalId = setInterval(() => setToday(new Date()),30000);
 
     useEffect(() => {
+
+        props.onSelectDropdown(dest);
 
         return () => {
             clearInterval(intervalId)
@@ -19,35 +22,27 @@ const Menu = (props) => {
         return `${date.getFullYear()}/${month}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
     }
 
-    const clickRef = () => {
-        props.onSelectDropdown('ref')
-    }
-
-    const clickWeather = () => {
-        props.onSelectDropdown('weather')
-    }
-
-    const clickHome = () => {
-        props.onSelectDropdown('')
+    const clickMenu = (item) => {
+        setDest(item);
     }
 
         return (
             <div>
                 <Navbar bg="dark" expand="sm" variant="dark">
                     <Container>
-                        <Navbar.Brand className='ml-3' onClick={clickHome}>Yan's Laboratory</Navbar.Brand>
+                        <Navbar.Brand className='ml-3' onClick={() => clickMenu('')}>Yan's Laboratory</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
 
                                 <Container className='ml-sm-3'>
-                                    <Nav.Link onClick={clickHome}>Home</Nav.Link>
+                                    <Nav.Link onClick={() => clickMenu('')}>Home</Nav.Link>
                                 </Container>
 
                                 <Container className='ml-sm-3'>
                                     <NavDropdown title="Experiment" id="basic-nav-dropdown">
-                                        <NavDropdown.Item onClick={clickWeather}>Weather Forecast</NavDropdown.Item>
-                                        <NavDropdown.Item href="">Coming...</NavDropdown.Item>
+                                        <NavDropdown.Item onClick={() => clickMenu('weather')}>Weather Forecast</NavDropdown.Item>
+                                        <NavDropdown.Item onClick={() => clickMenu('task')}>Task Tracker</NavDropdown.Item>
                                         <NavDropdown.Item href="">Coming...</NavDropdown.Item>
                      {/*                   <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/}
@@ -55,7 +50,7 @@ const Menu = (props) => {
                                 </Container>
 
                                 <Container className='ml-sm-3'>
-                                    <Nav.Link onClick={clickRef}>Reference</Nav.Link>
+                                    <Nav.Link onClick={() => clickMenu('ref')}>Reference</Nav.Link>
                                 </Container>
                             </Nav>
 

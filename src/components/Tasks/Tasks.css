@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+.Tasks {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Tasks body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.Tasks .page-header{
+    flex-direction: row;
+}
+
+.Tasks .title{
+  text-align:center;
+  margin-right: 50px;
+}
+
+.Tasks .btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.Tasks .btn:focus {
+  outline: none;
+}
+
+.Tasks .btn:active {
+  transform: scale(0.98);
+}
+
+.Tasks .btn-block {
+  display: block;
+  width: 100%;
+}
+
+.Tasks .task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.Tasks .task.reminder {
+  border-left: 5px solid green;
+}
+
+.Tasks .task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Tasks .add-form {
+  margin-bottom: 40px;
+}
+
+.Tasks .form-control {
+  margin: 20px 0;
+}
+
+.Tasks .form-control label {
+  display: block;
+}
+
+.Tasks .form-control input {
+  height: 30px;
+  padding-left: 5px;
+  border-color: var(--bs-gray-200);
+}
+
+.Tasks .form-control-check label {
+  flex: 1;
+}
+
+.Tasks .form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+.Tasks footer {
+  margin-top: 30px;
+  text-align: center;
+}

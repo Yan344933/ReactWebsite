@@ -1,8 +1,7 @@
 import './Weather.css';
 import React, { useState } from 'react';
 import DailyWeather from '../DailyWeather/DailyWeather';
-import {Button, Container, Row, Spinner} from 'react-bootstrap';
-//import Spinner from 'react-bootstrap';
+import {Button, Container, Row} from 'react-bootstrap';
 
 
 const Weather = () => {
@@ -12,12 +11,7 @@ const Weather = () => {
 
   const url = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=tc';
 
-  const toggleLoading = () => {
-    setLoading(!loading);
-  };
-
   const getWeather = async() => {
-    toggleLoading()
 
     try {
       const resp = await fetch(url)
@@ -37,12 +31,11 @@ const Weather = () => {
       console.log(err);
     }
 
-    toggleLoading()
   };
 
   return (
     <div className="Weather">
-      <div class="page-header">
+      <div className="page-header">
         <Container>
           <Row>
             <div className='col-7 text-sm-end'>
@@ -67,7 +60,6 @@ const Weather = () => {
         }
         </Row>
       </Container>
-      {loading? <Spinner animation="border" variant="danger"/>: null} 
     </div>
   );
 }
