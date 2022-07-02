@@ -48,6 +48,10 @@ const Menu = (props) => {
                                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/}
                                         </NavDropdown>
                                 </Container>
+                                
+                                <Container className='ml-sm-3'>
+                                    <Nav.Link onClick={() => clickMenu('component')}>Components</Nav.Link>
+                                </Container>
 
                                 <Container className='ml-sm-3'>
                                     <Nav.Link onClick={() => clickMenu('ref')}>Reference</Nav.Link>

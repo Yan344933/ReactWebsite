@@ -1,6 +1,6 @@
 import './Weather.css';
 import React, { useState } from 'react';
-import DailyWeather from '../DailyWeather/DailyWeather';
+import DailyWeather from './DailyWeather';
 import {Button, Container, Row} from 'react-bootstrap';
 
 
@@ -50,7 +50,7 @@ const Weather = () => {
         </Row>
         </Container>
       </div>
-      <Container className='p-md-3'>
+      <Container>
         <Row className='justify-content-center'>
         {
           weather &&
