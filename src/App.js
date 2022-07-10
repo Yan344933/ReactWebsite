@@ -5,6 +5,7 @@ import Reference from './components/Reference/Reference'
 import Home from './components/Home/Home'
 import Tasks from './components/Tasks/Tasks'
 import Component from './components/Component/Component'
+import Game from './components/XXOO/Game'
 import './App.css'
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
                 {component === 'ref' && <Reference />}
                 {component === 'task' && <Tasks />}
                 {component === 'component' && <Component />}
+                {component === 'XXOO' && <Game />}
             </div>
         </div>
     )

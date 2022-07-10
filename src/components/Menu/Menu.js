@@ -43,7 +43,7 @@ const Menu = (props) => {
                                     <NavDropdown title="Experiment" id="basic-nav-dropdown">
                                         <NavDropdown.Item onClick={() => clickMenu('weather')}>Weather Forecast</NavDropdown.Item>
                                         <NavDropdown.Item onClick={() => clickMenu('task')}>Task Tracker</NavDropdown.Item>
-                                        <NavDropdown.Item href="">Coming...</NavDropdown.Item>
+                                        <NavDropdown.Item onClick={() => clickMenu('XXOO')}>XXOO Game</NavDropdown.Item>
                      {/*                   <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>*/}
                                         </NavDropdown>
