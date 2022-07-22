@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Clock } from './clock';
 
 const Menu = () => {
@@ -19,10 +19,10 @@ const Menu = () => {
 
                                 <Container className='ml-sm-3'>
                                     <NavDropdown title="Experiment" id="basic-nav-dropdown">
-                                        <Link className="dropdown-item" to="/experiment/weather">Weather Forecast</Link>
-                                        <Link className="dropdown-item" to="/experiment/task">Task Tracker</Link>
-                                        <Link className="dropdown-item" to="/experiment/XXOO">XXOO Game</Link>
-                                        <Link className="dropdown-item" to="/experiment/converter">Converter</Link>
+                                        <NavDropdown.Item to="/experiment/weather" as={Link}>Weather Forecast</NavDropdown.Item>
+                                        <NavDropdown.Item to="/experiment/task" as={Link}>Task Tracker</NavDropdown.Item>
+                                        <NavDropdown.Item to="/experiment/XXOO" as={Link}>XXOO Game</NavDropdown.Item>
+                                        <NavDropdown.Item to="/experiment/converter" as={Link}>Converter</NavDropdown.Item>
                      {/*                   <NavDropdown.Divider />
                                         <Link href="#action/3.4">Separated link</Link>*/}
                                         </NavDropdown>

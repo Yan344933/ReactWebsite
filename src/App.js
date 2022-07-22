@@ -1,39 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Weather from './components/Weather/Weather'
-import Menu from './components/Menu/Menu'
-import Reference from './components/Reference/Reference'
-import Home from './components/Home/Home'
+import Menu from './pages/Menu/Menu'
+import Reference from './pages/Reference/Reference'
+import Home from './pages/Home/Home'
 import Tasks from './components/Tasks/Tasks'
-import Component from './components/Component/Component'
+import Component from './pages/Component/Component'
 import Game from './components/XXOO/Game'
 import './App.css'
 import Converter from './components/Converter/Converter';
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
 
-    const [component, setComponent] = useState('');
-
-    const componentChange = (component_foreign) => {
-        setComponent(component_foreign)
-    }
-
     return (
             
-    /*    <div>
-            <div className='menu'>
-                <Menu onSelectDropdown={componentChange}/>
-            </div>
-            <div>
-                {component === '' && <Home />}
-                {component === 'weather' && <Weather />}
-                {component === 'ref' && <Reference />}
-                {component === 'task' && <Tasks />}
-                {component === 'component' && <Component />}
-                {component === 'XXOO' && <Game />}
-                {component === 'converter' && <Converter />}
-            </div>
-        </div>*/
         <>
             <Menu />
             <Routes>

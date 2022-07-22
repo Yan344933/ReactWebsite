@@ -1,9 +1,8 @@
 import React from 'react';
-import {Button, Container, Row} from 'react-bootstrap';
-import NeonButton from './Neon-Button/Neon-Button'
+import { Container, Row} from 'react-bootstrap';
+import { NeonButton } from './Neon-Button/Neon-Button'
 
 const Component = () => {
-
 
     return(
         <div>
