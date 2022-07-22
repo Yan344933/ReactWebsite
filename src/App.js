@@ -7,6 +7,8 @@ import Tasks from './components/Tasks/Tasks'
 import Component from './components/Component/Component'
 import Game from './components/XXOO/Game'
 import './App.css'
+import Converter from './components/Converter/Converter';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
 
@@ -18,7 +20,7 @@ const App = () => {
 
     return (
             
-        <div>
+    /*    <div>
             <div className='menu'>
                 <Menu onSelectDropdown={componentChange}/>
             </div>
@@ -29,8 +31,21 @@ const App = () => {
                 {component === 'task' && <Tasks />}
                 {component === 'component' && <Component />}
                 {component === 'XXOO' && <Game />}
+                {component === 'converter' && <Converter />}
             </div>
-        </div>
+        </div>*/
+        <>
+            <Menu />
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/component' element={<Component />} />
+                <Route path='/reference' element={<Reference />} />
+                <Route path='/experiment/weather' element={<Weather />} />
+                <Route path='/experiment/task' element={<Tasks />} />
+                <Route path='/experiment/XXOO' element={<Game />} />
+                <Route path='/experiment/converter' element={<Converter />} />
+            </Routes>
+        </>
     )
     }
 
