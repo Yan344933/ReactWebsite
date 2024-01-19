@@ -9,6 +9,7 @@ import Game from './components/XXOO/Game'
 import './App.css'
 import Converter from './components/Converter/Converter';
 import { Routes, Route } from 'react-router-dom';
+import MapCompare from './components/BusCompare/MapContainer';
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path='/experiment/task' element={<Tasks />} />
                 <Route path='/experiment/XXOO' element={<Game />} />
                 <Route path='/experiment/converter' element={<Converter />} />
+                <Route path='/experiment/bus-map-compare' element={<MapCompare />} />
             </Routes>
         </>
     )

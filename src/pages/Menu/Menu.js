@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Clock } from './clock';
 
 const Menu = () => {
@@ -23,6 +23,7 @@ const Menu = () => {
                                         <NavDropdown.Item to="/experiment/task" as={Link}>Task Tracker</NavDropdown.Item>
                                         <NavDropdown.Item to="/experiment/XXOO" as={Link}>XXOO Game</NavDropdown.Item>
                                         <NavDropdown.Item to="/experiment/converter" as={Link}>Converter</NavDropdown.Item>
+                                        <NavDropdown.Item to="/experiment/bus-map-compare" as={Link}>Bus Map Compare</NavDropdown.Item>
                      {/*                   <NavDropdown.Divider />
                                         <Link href="#action/3.4">Separated link</Link>*/}
                                         </NavDropdown>

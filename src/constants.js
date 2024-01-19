@@ -1,3 +1,6 @@
+
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+
 const reference = [
     {
         'name' : 'React-Bootstrap',
@@ -12,9 +15,9 @@ const reference = [
         'url' : 'https://ithelp.ithome.com.tw/users/20128604/ironman/3066'
     },
     {
-        'name' : 'google-maps-react',
-        'url' : 'https://www.npmjs.com/package/google-maps-react'
+        'name' : 'Google Map in React',
+        'url' : 'https://www.npmjs.com/package/@googlemaps/react-wrapper'
     }
 ];
 
-export {reference};
+export {GOOGLE_API_KEY, reference};
